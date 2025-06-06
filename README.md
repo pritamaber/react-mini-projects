@@ -6,16 +6,6 @@ Each project is written with clean code and styled using Tailwind CSS.
 
 ---
 
-## 🧠 What You'll Learn
-
-- `useState`, `useEffect`, `useRef`
-- Form handling & controlled components
-- List rendering & filtering
-- Conditional rendering
-- Routing with React Router
-- Modular project structuring
-- Tailwind CSS integration
-
 ---
 
 ## 📁 Folder Structure
