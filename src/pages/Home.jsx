@@ -19,9 +19,9 @@ export default function Home() {
             <h2 className="text-base font-semibold text-blue-700 dark:text-blue-400 mb-1">
               🔹 {project.title}
             </h2>
-            {project.description && (
+            {project.desc && (
               <p className="text-xs text-gray-600 dark:text-gray-300 leading-snug">
-                {project.description}
+                {project.desc}
               </p>
             )}
           </Link>

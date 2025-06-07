@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import ProductSearchComponent from "../components/ProductSearchComponent";
 import LoadingSpinner from "../components/LoadingSpinner";
+import Searchbar from "../components/Searchbar";
 
 function CardMiniProject() {
   const [productCardData, setProductCardData] = useState([]);
-  const [searchProducts, setSearchProducts] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
 
   // Filter products by title (case-insensitive)
   const filteredProducts = productCardData.filter((product) =>
-    product.title.toLowerCase().includes(searchProducts.toLowerCase())
+    product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Fetch products on mount
@@ -31,10 +31,7 @@ function CardMiniProject() {
         🛒 Product Listings
       </h1>
 
-      <ProductSearchComponent
-        searchProducts={searchProducts}
-        setSearchProducts={setSearchProducts}
-      />
+      <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-screen-lg mx-auto px-4 pb-6">
         {loading ? (

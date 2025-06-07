@@ -2,9 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import UseStateCounter from "./pages/UseStateCounter";
 import UseEffectTimer from "./pages/UseEffectTimer";
-import SimpleSearch from "./pages/SimpleSearch";
+import MovieSearch from "./pages/MovieSearch";
 import FormHandling from "./pages/FormHandling";
 import CardMiniProject from "./pages/CardMiniProject";
+import GithubFinder from "./pages/GithubFinder";
 
 import Header from "./components/Header";
 
@@ -16,9 +17,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/usestate-counter" element={<UseStateCounter />} />
         <Route path="/useeffect-timer" element={<UseEffectTimer />} />
-        <Route path="/simple-search" element={<SimpleSearch />} />
-        <Route path="/form-handling" element={<FormHandling />} />
-        <Route path="/product-cards" element={<CardMiniProject />} />
+        <Route path="/movie-search" element={<MovieSearch />} />
+        <Route path="/simple-form" element={<FormHandling />} />
+        <Route path="/simple-ecom" element={<CardMiniProject />} />
+        <Route path="/github-profile-finder" element={<GithubFinder />} />
       </Routes>
     </BrowserRouter>
   );
