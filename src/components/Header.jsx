@@ -39,6 +39,10 @@ export default function Header() {
           GitHub Repo ↗
         </a>
       </div>
+
+      <div className="mt-4 text-xs text-gray-500 dark:text-gray-400">
+        © {new Date().getFullYear()} Pritam Das. All rights reserved.
+      </div>
     </header>
   );
 }
