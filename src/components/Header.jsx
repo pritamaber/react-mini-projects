@@ -4,12 +4,12 @@ export default function Header() {
       <div className="mb-2 text-base">
         This project series is part of Pritam's portfolio at{" "}
         <a
-          href="https://taglet.in"
+          href="https://impritam.com"
           target="_blank"
           rel="noopener noreferrer"
           className="underline font-semibold hover:text-blue-600 dark:hover:text-blue-400"
         >
-          taglet.in
+          impritam.com
         </a>
       </div>
 
@@ -23,7 +23,7 @@ export default function Header() {
           Projects ↗
         </a>
         <a
-          href="https://taglet.in"
+          href="https://impritam.com"
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-blue-600 dark:hover:text-blue-400 font-medium"
