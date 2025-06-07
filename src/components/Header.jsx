@@ -15,7 +15,7 @@ export default function Header() {
 
       <div className="flex justify-center flex-wrap gap-4 text-sm mt-2">
         <a
-          href="https://projects.taglet.in"
+          href="https://projects.impritam.com"
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-blue-600 dark:hover:text-blue-400 font-medium"
