@@ -1,33 +1,44 @@
 const projects = [
   {
-    title: "Counter app",
+    title: "🧮 useState Counter App",
     path: "/usestate-counter",
-    desc: "Basic state management using useState to increment, decrement, and reset a counter.",
+    desc: "Basic state management to increment, decrement, and reset a counter.",
+    concepts: ["useState", "Event Handling", "State Updates"],
   },
   {
-    title: "Timer app",
+    title: "⏱️ useEffect Timer App",
     path: "/useeffect-timer",
-    desc: "Understanding useEffect with timers to run effects on mount and clean them up.",
+    desc: "Timer app demonstrating useEffect with intervals and cleanups.",
+    concepts: ["useEffect", "Timers", "Cleanup Functions"],
   },
   {
-    title: "Movie Search app",
+    title: "🎬 Movie Search (Live Filter)",
     path: "/movie-search",
-    desc: "Live filtering of a list using controlled input and basic state management.",
+    desc: "Real-time filtering of movie list using controlled input.",
+    concepts: ["Controlled Input", "Filtering", "useState"],
   },
   {
-    title: "Form",
+    title: "📝 Form Handling App",
     path: "/simple-form",
-    desc: "Controlled form inputs with state tracking and form submission handling.",
+    desc: "Controlled form with multiple input fields and submission logic.",
+    concepts: ["Forms", "Controlled Components", "Form Submission"],
   },
   {
-    title: "Simple ecommerce app",
+    title: "🛒 Simple E-Commerce UI",
     path: "/simple-ecom",
-    desc: "Displaying API data using props in reusable card components with dynamic rendering.",
+    desc: "Product cards fetched from API and displayed using reusable components.",
+    concepts: ["Props", "API Fetch", "Reusable Components", "useEffect"],
   },
   {
-    title: "Github profile finder",
+    title: "🔍 GitHub Profile Finder (Debounced)",
     path: "/github-profile-finder",
-    desc: "Using debounced input to search for GitHub profiles with API integration. Includes error handling and loading states.",
+    desc: "Debounced search for GitHub users with API integration, error handling, and loading states.",
+    concepts: [
+      "Debounce",
+      "Custom Hook",
+      "API Calls",
+      "Error & Loading States",
+    ],
   },
 ];
 
