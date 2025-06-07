@@ -29,7 +29,7 @@ export default function Header() {
         Portfolio ↗
       </a>
       <a
-        href="https://github.com/pritamaber/react-fundamental-projects"
+        href="https://github.com/pritamaber/react-mini-projects"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block underline hover:text-blue-600 dark:hover:text-blue-400"
