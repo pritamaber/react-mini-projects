@@ -4,6 +4,7 @@ import UseStateCounter from "./pages/UseStateCounter";
 import UseEffectTimer from "./pages/UseEffectTimer";
 import SimpleSearch from "./pages/SimpleSearch";
 import FormHandling from "./pages/FormHandling";
+import CardMiniProject from "./pages/CardMiniProject";
 
 import Header from "./components/Header";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/useeffect-timer" element={<UseEffectTimer />} />
         <Route path="/simple-search" element={<SimpleSearch />} />
         <Route path="/form-handling" element={<FormHandling />} />
+        <Route path="/product-cards" element={<CardMiniProject />} />
       </Routes>
     </BrowserRouter>
   );
