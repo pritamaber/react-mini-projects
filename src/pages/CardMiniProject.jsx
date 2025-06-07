@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import SearchComponent from "../components/SearchComponent";
+import ProductSearchComponent from "../components/ProductSearchComponent";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 function CardMiniProject() {
   const [productCardData, setProductCardData] = useState([]);
   const [searchProducts, setSearchProducts] = useState("");
+  const [loading, setLoading] = useState(true);
 
   // Filter products by title (case-insensitive)
   const filteredProducts = productCardData.filter((product) =>
@@ -17,6 +19,7 @@ function CardMiniProject() {
       const response = await fetch("https://fakestoreapi.com/products");
       const data = await response.json();
       setProductCardData(data);
+      setLoading(false);
     }
 
     fetchProductData();
@@ -28,13 +31,15 @@ function CardMiniProject() {
         🛒 Product Listings
       </h1>
 
-      <SearchComponent
+      <ProductSearchComponent
         searchProducts={searchProducts}
         setSearchProducts={setSearchProducts}
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 max-w-screen-lg mx-auto px-4 pb-6">
-        {filteredProducts.length > 0 ? (
+        {loading ? (
+          <LoadingSpinner className="col-span-full" />
+        ) : filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <div key={product.id} className="h-full">
               <ProductCard

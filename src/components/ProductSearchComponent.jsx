@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchComponent({ searchProducts, setSearchProducts }) {
+function ProductSearchComponent({ searchProducts, setSearchProducts }) {
   return (
     <div className="mb-6 px-4">
       <input
@@ -14,4 +14,4 @@ function SearchComponent({ searchProducts, setSearchProducts }) {
   );
 }
 
-export default SearchComponent;
+export default ProductSearchComponent;
