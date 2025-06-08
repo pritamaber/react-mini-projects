@@ -1,33 +1,39 @@
 const projects = [
+  // 📦 Mini Projects
   {
     title: "🧮 useState Counter App",
     path: "/usestate-counter",
     desc: "Basic state management to increment, decrement, and reset a counter.",
     concepts: ["useState", "Event Handling", "State Updates"],
+    type: "mini",
   },
   {
     title: "⏱️ useEffect Timer App",
     path: "/useeffect-timer",
     desc: "Timer app demonstrating useEffect with intervals and cleanups.",
     concepts: ["useEffect", "Timers", "Cleanup Functions"],
+    type: "mini",
   },
   {
     title: "🎬 Movie Search (Live Filter)",
     path: "/movie-search",
     desc: "Real-time filtering of movie list using controlled input.",
     concepts: ["Controlled Input", "Filtering", "useState"],
+    type: "mini",
   },
   {
     title: "📝 Form Handling App",
     path: "/simple-form",
     desc: "Controlled form with multiple input fields and submission logic.",
     concepts: ["Forms", "Controlled Components", "Form Submission"],
+    type: "mini",
   },
   {
     title: "🛒 Simple E-Commerce UI",
     path: "/simple-ecom",
     desc: "Product cards fetched from API and displayed using reusable components.",
     concepts: ["Props", "API Fetch", "Reusable Components", "useEffect"],
+    type: "mini",
   },
   {
     title: "🔍 GitHub Profile Finder (Debounced)",
@@ -39,6 +45,15 @@ const projects = [
       "API Calls",
       "Error & Loading States",
     ],
+    type: "mini",
+  },
+  // 🚀 Flagship Projects
+  {
+    title: "📋 Taskify - Fullstack Task Manager",
+    path: "https://taskify.impritam.com",
+    desc: "Fullstack MERN CRUD app with MongoDB, Express, and React. Supports add/edit/delete, form validation, toast notifications, and separate backend at api.impritam.com.",
+    concepts: ["CRUD", "REST API", "React Router", "Tailwind CSS", "Toastify"],
+    type: "flagship",
   },
 ];
 
