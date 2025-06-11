@@ -14,11 +14,22 @@ function CardMiniProject() {
   );
 
   // Fetch products on mount
+  // useEffect(() => {
+  //   async function fetchProductData() {
+  //     const response = await fetch("https://fakestoreapi.com/products");
+  //     const data = await response.json();
+  //     setProductCardData(data);
+  //     setLoading(false);
+  //   }
+
+  //   fetchProductData();
+  // }, []);
+
   useEffect(() => {
     async function fetchProductData() {
-      const response = await fetch("https://fakestoreapi.com/products");
-      const data = await response.json();
-      setProductCardData(data);
+      const result = await fetch("https://dummyjson.com/products");
+      const data = await result.json();
+      setProductCardData(data.products);
       setLoading(false);
     }
 
@@ -42,7 +53,7 @@ function CardMiniProject() {
               <ProductCard
                 title={product.title}
                 price={product.price}
-                image={product.image}
+                thumbnail={product.thumbnail}
                 description={product.description}
                 category={product.category}
                 rating={product.rating?.rate}

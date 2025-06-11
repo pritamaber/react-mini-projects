@@ -47,6 +47,19 @@ const projects = [
     ],
     type: "mini",
   },
+  {
+    title: "🛍️ Cart App (Context API + useReducer)",
+    path: "/cart-context-project",
+    desc: "Global cart state management using Context API and useReducer. Add/remove products and share state across components.",
+    concepts: [
+      "Context API",
+      "useReducer",
+      "Global State",
+      "Component Communication",
+    ],
+    type: "mini",
+  },
+
   // 🚀 Flagship Projects
   {
     title: "📋 Taskify - Fullstack Task Manager",

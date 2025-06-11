@@ -1,40 +1,41 @@
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react";
+
 export default function ProductCard({
+  id,
   title,
-  price,
-  image,
-  category,
   description,
-  rating,
+  price,
+  thumbnail,
 }) {
+  const { dispatch } = useContext(CartContext);
+  const product = { id, title, price, thumbnail };
+  function handleAddToCart() {
+    dispatch({ type: "ADD_TO_CART", payload: product });
+  }
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-3 w-full transition hover:shadow-md h-full flex flex-col">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex flex-col justify-between h-full max-w-xs mx-auto">
       <img
-        src={image}
+        src={thumbnail}
         alt={title}
-        className="w-full h-40 object-contain mb-2 rounded"
+        className="w-full h-40 object-cover rounded-md mb-4"
       />
 
-      <div className="flex-grow">
-        <h2 className="text-base font-semibold text-gray-900 dark:text-gray-100 mb-1">
-          {title}
-        </h2>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-          {category}
-        </p>
-        <p className="text-sm text-gray-700 dark:text-gray-300 line-clamp-2 mb-2">
-          {description}
-        </p>
-      </div>
+      <h2 className="text-lg font-semibold mb-1 text-gray-900 dark:text-white">
+        {title}
+      </h2>
+      <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2 mb-2">
+        {description}
+      </p>
 
-      <div className="flex justify-between items-center mt-2">
-        <span className="text-base font-bold text-green-600 dark:text-green-400">
-          ₹{price}
-        </span>
-        {rating && (
-          <span className="text-yellow-500 font-medium text-sm">
-            ⭐ {rating}/5
-          </span>
-        )}
+      <div className="mt-auto">
+        <p className="text-lg font-bold text-blue-600 mb-2">₹{price}</p>
+        <button
+          onClick={handleAddToCart}
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );
