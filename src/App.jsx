@@ -1,4 +1,7 @@
+// import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
 import UseStateCounter from "./pages/UseStateCounter";
 import UseEffectTimer from "./pages/UseEffectTimer";
@@ -24,6 +27,7 @@ function App() {
         <Route path="/github-profile-finder" element={<GithubFinder />} />
         <Route path="/cart-context-project" element={<CartContextProject />} />
       </Routes>
+      <ToastContainer position="bottom-right" autoClose={2000} />
     </BrowserRouter>
   );
 }

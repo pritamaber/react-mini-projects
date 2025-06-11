@@ -11,8 +11,10 @@ function CartContextProject() {
           <div className="lg:col-span-2">
             <Productlist />
           </div>
-          <div className="lg:col-span-1">
-            <Cart />
+          <div className="lg:col-span-1 relative lg:static">
+            <div className="lg:sticky lg:top-10 fixed bottom-4 right-4 z-50 w-[90vw] max-w-sm lg:max-w-full lg:relative">
+              <Cart />
+            </div>
           </div>
         </div>
       </div>

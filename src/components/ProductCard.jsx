@@ -1,5 +1,6 @@
 import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
+import { toast } from "react-toastify";
 
 export default function ProductCard({
   id,
@@ -12,6 +13,7 @@ export default function ProductCard({
   const product = { id, title, price, thumbnail };
   function handleAddToCart() {
     dispatch({ type: "ADD_TO_CART", payload: product });
+    toast.success("product added to cart");
   }
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex flex-col justify-between h-full max-w-xs mx-auto">

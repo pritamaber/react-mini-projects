@@ -40,17 +40,19 @@ function Productlist() {
   );
 
   return (
-    <>
-      <h1 className="text-center text-5xl m-8">Context API - Shopping Cart</h1>
-      <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+    <div className="px-4 py-8 bg-gray-50 dark:bg-gray-900 min-h-screen">
+      <h1 className="text-center text-4xl sm:text-5xl font-bold text-blue-600 mb-10">
+        🛒 Shopping Cart Demo Context-API
+      </h1>
 
-      {/* Initial product loading */}
-      {loading ? (
-        <LoadingSpinner />
-      ) : isSearching ? (
+      <div className="max-w-4xl mx-auto mb-8">
+        <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      </div>
+
+      {loading || isSearching ? (
         <LoadingSpinner />
       ) : filteredProducts.length === 0 && debouncedSearch ? (
-        <p className="text-center text-gray-500 mt-8 text-xl">
+        <p className="text-center text-gray-500 mt-12 text-xl">
           No products found for "
           <span className="font-semibold">{debouncedSearch}</span>"
         </p>
@@ -61,7 +63,7 @@ function Productlist() {
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }
 
