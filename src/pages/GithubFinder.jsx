@@ -51,6 +51,13 @@ function GithubFinder() {
           🔍 GitHub Profile Finder
         </h1>
 
+        <p className="text-sm text-gray-600 dark:text-gray-300 text-center mb-4 bg-blue-50 dark:bg-blue-900 px-4 py-2 rounded-md shadow-sm">
+          💡 Try searching fun usernames like{" "}
+          <code className="font-semibold">god</code>,{" "}
+          <code className="font-semibold">hello</code>, or even your own GitHub
+          handle! You might be surprised 👀
+        </p>
+
         <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
         {loading && <LoadingSpinner />}
