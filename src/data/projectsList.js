@@ -59,6 +59,19 @@ const projects = [
     ],
     type: "mini",
   },
+  {
+    title: "🗺️ GeoTracker – Live Location on Map",
+    path: "/map-project",
+    desc: "Uses browser geolocation to display current location on an interactive Leaflet map using OpenStreetMap tiles.",
+    concepts: [
+      "useState",
+      "useEffect",
+      "Custom Hook",
+      "Leaflet.js",
+      "Geolocation API",
+    ],
+    type: "mini",
+  },
 
   // 🚀 Flagship Projects
   {

@@ -10,6 +10,7 @@ import FormHandling from "./pages/FormHandling";
 import CardMiniProject from "./pages/CardMiniProject";
 import GithubFinder from "./pages/GithubFinder";
 import CartContextProject from "./pages/CartContextProject";
+import MapProject from "./pages/MapProject";
 
 import Header from "./components/Header";
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/simple-ecom" element={<CardMiniProject />} />
         <Route path="/github-profile-finder" element={<GithubFinder />} />
         <Route path="/cart-context-project" element={<CartContextProject />} />
+        <Route path="/map-project" element={<MapProject />} />
       </Routes>
       <ToastContainer position="bottom-right" autoClose={2000} />
     </BrowserRouter>

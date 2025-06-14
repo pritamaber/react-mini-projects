@@ -15,6 +15,7 @@ A curated set of hands-on React mini projects to master core concepts — from `
 | 🛒 [Simple E-Commerce UI](./src/pages/CardMiniProject.jsx)                   | Product grid fetched from an API with reusable cards.                | Props, API Calls, useEffect                      |
 | 🔍 [GitHub Profile Finder (Debounced)](./src/pages/GithubFinder.jsx)         | Debounced GitHub user search with loading and error handling.        | Custom Hook, Debounce, API Integration           |
 | 🛍️ [Cart App (Context API + useReducer)](./src/pages/CartContextProject.jsx) | Add/remove items to a cart using global state via Context + Reducer. | Context API, useReducer, Component Communication |
+| 🗺️ [GeoTracker (Live Location Map)](./src/pages/MapProject.jsx)              | Shows your current location on an interactive map using Leaflet.     | Geolocation API, Custom Hook, Leaflet.js         |
 
 ---
 
