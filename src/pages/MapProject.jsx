@@ -5,6 +5,9 @@ import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
+// custom loading spinner
+import LoadingSpinner from "../components/LoadingSpinner";
+
 // Fix marker icon issue for React-Leaflet
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -21,7 +24,14 @@ function MapProject() {
         📍 Your Location
       </h2>
 
-      {position ? (
+      {!position ? (
+        <div className="flex flex-col items-center space-y-4">
+          <LoadingSpinner />
+          <p className="text-center text-sm sm:text-base">
+            Fetching your location...
+          </p>
+        </div>
+      ) : (
         <>
           <p className="text-center text-sm sm:text-base">
             Latitude: {position.latitude} <br />
@@ -42,18 +52,12 @@ function MapProject() {
               <Marker position={[position.latitude, position.longitude]} />
             </MapContainer>
           </div>
-        </>
-      ) : (
-        <p className="text-center text-sm sm:text-base">
-          Fetching your location...
-        </p>
-      )}
 
-      {position && (
-        <p className="text-center text-yellow-400 text-xs sm:text-sm">
-          ⚠️ Location may be inaccurate (~{Math.round(position.accuracy)}{" "}
-          meters)
-        </p>
+          <p className="text-center text-yellow-400 text-xs sm:text-sm">
+            ⚠️ Location may be inaccurate (~{Math.round(position.accuracy)}{" "}
+            meters)
+          </p>
+        </>
       )}
     </div>
   );
