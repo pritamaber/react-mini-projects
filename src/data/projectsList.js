@@ -81,6 +81,20 @@ const projects = [
     concepts: ["CRUD", "REST API", "React Router", "Tailwind CSS", "Toastify"],
     type: "flagship",
   },
+  {
+    title: "🔐 LinkPass – Firebase Auth + Firestore App",
+    path: "https://linkpass.impritam.com/dashboard",
+    desc: "A secure link manager app with Firebase Auth, Firestore, protected routes, link saving, deletion, and debounced search. Built with React + Tailwind CSS.",
+    concepts: [
+      "Firebase Auth",
+      "Firestore",
+      "Protected Routes",
+      "React Router",
+      "React Toast",
+      "Debounced Search",
+    ],
+    type: "flagship",
+  },
 ];
 
 export default projects;
