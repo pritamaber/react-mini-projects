@@ -5,7 +5,6 @@ export const cartReducer = (cartItems, cartAction) => {
         (item) => item.id === cartAction.payload.id
       );
       if (exists) return cartItems;
-      // console.log(cartAction.payload);
       return [...cartItems, cartAction.payload];
     }
     case "REMOVE_FROM_CART":
