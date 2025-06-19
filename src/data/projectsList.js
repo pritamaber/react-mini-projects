@@ -101,7 +101,7 @@ const projects = [
     desc: "A modern, blazing-fast Kanban board app built for devs. Project & tag filters, minimal UI, responsive, and dark mode.",
     github: "https://github.com/pritamaber/tagfuse",
     concepts: ["React", "TailwindCSS", "Firebase Auth", "Vercel", "REST API"],
-    type: "Flagship",
+    type: "flagship",
   },
 ];
 
