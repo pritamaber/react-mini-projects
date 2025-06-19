@@ -1,6 +1,5 @@
 import { CartContext } from "../context/CartContext";
-import { useContext } from "react";
-import { toast } from "react-toastify";
+import AddToCartButton from "./AddToCartButton";
 
 export default function ProductCard({
   id,
@@ -9,12 +8,8 @@ export default function ProductCard({
   price,
   thumbnail,
 }) {
-  const { dispatch } = useContext(CartContext);
   const product = { id, title, price, thumbnail };
-  function handleAddToCart() {
-    dispatch({ type: "ADD_TO_CART", payload: product });
-    toast.success("product added to cart");
-  }
+
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 flex flex-col justify-between h-full max-w-xs mx-auto">
       <img
@@ -32,12 +27,9 @@ export default function ProductCard({
 
       <div className="mt-auto">
         <p className="text-lg font-bold text-blue-600 mb-2">₹{price}</p>
-        <button
-          onClick={handleAddToCart}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full"
-        >
-          Add to Cart
-        </button>
+
+        {/* {Add to cart button} */}
+        <AddToCartButton product={product} />
       </div>
     </div>
   );
