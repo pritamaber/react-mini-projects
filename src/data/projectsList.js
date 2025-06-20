@@ -73,14 +73,14 @@ const projects = [
     type: "mini",
   },
 
-  // 🚀 Flagship Projects
-  {
-    title: "📋 Taskify - Fullstack Task Manager",
-    path: "https://taskify.impritam.com",
-    desc: "Fullstack MERN CRUD app with MongoDB, Express, and React. Supports add/edit/delete, form validation, toast notifications, and separate backend at api.impritam.com.",
-    concepts: ["CRUD", "REST API", "React Router", "Tailwind CSS", "Toastify"],
-    type: "flagship",
-  },
+  // // 🚀 Flagship Projects
+  // {
+  //   title: "📋 Taskify - Fullstack Task Manager",
+  //   path: "https://taskify.impritam.com",
+  //   desc: "Fullstack MERN CRUD app with MongoDB, Express, and React. Supports add/edit/delete, form validation, toast notifications, and separate backend at api.impritam.com.",
+  //   concepts: ["CRUD", "REST API", "React Router", "Tailwind CSS", "Toastify"],
+  //   type: "flagship",
+  // },
   {
     title: "🔐 LinkPass – Firebase Auth + Firestore App",
     path: "https://linkpass.impritam.com/dashboard",
